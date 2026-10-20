@@ -73,6 +73,9 @@ jobs:
       - name: verify:vocabulary
         run: npm run verify:vocabulary
 
+      - name: verify:doc-paths
+        run: npm run verify:doc-paths
+
       - name: verify:markup
         run: npm run verify:markup
 

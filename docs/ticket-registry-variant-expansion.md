@@ -46,8 +46,8 @@ instance into a library component. Three defects, in increasing severity:
 **Publish keys are the stable identifier, and they exist.** Every component
 set and every variant carries a 40-hex key that is identical in both files
 (e.g. Button set `59ca818e0e74d6a59847459225600b0e6357d774`). They are
-reachable two ways — `search_design_system`, and `use_figma`
-(`mainComponent.key`, and the parent set's `.key`). They are **not** reachable
+reachable two ways — `search_design_system`, and `use_figma` (the main
+component's key property, and the parent set's). They are **not** reachable
 through `get_metadata` / `get_design_context`, which is the entire tool set
 `val-figma` carries. That is a tooling gap, not a Figma limitation.
 

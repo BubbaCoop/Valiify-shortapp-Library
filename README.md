@@ -7,7 +7,7 @@ CSS-only, framework-agnostic, zero JavaScript dependencies. Components are
 extracted from the Short App Figma component library and verified against it
 with an automated visual harness.
 
-> **Status: v1.4.0 on npm — 31 components**, extracted from the Short App
+> **Status: v1.4.2 on npm — 31 components**, extracted from the Short App
 > Figma file and verified against it: 741 computed-style assertions,
 > axe-core clean across every story, token-pinned control heights
 > (`--height-*`), drawn disabled/focus/loading states, and WCAG 2.5.8
@@ -84,8 +84,8 @@ Three more things to know before using it:
    - **Add a utility:** use it in the methodology, then
      `npm run build:utility-surface && npm run build`, and commit the regenerated
      `src/utility-surface.css`.
-   - **Add a variant:** extend `RESPONSIVE` in `scripts/build-utility-surface.mjs`
-     and rebuild. Each one multiplies the surface by the number of bases.
+   - **Add a variant:** extend `RESPONSIVE` in [scripts/build-utility-surface.mjs](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/scripts/build-utility-surface.mjs)
+     in the repository and rebuild. Each one multiplies the surface by the number of bases.
    - **Or skip the whole trade-off:** use `./source` with your own Tailwind v4 and
      get the full scale, compiled by your build.
 
@@ -161,7 +161,7 @@ See [GETTING_STARTED.md](GETTING_STARTED.md) for the complete setup guide and
 
 ## Components
 
-27 components, each documented in [CLAUDE.md](CLAUDE.md)'s Quick Reference
+31 components, each documented in [the repo's CLAUDE.md Quick Reference](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/CLAUDE.md)
 with class API, state tables, and copy-pasteable HTML:
 
 - **Controls** — Button (Standard: Primary/Secondary/Micro/Bubble),
@@ -202,17 +202,17 @@ npm run audit            # coverage across the library
 ```
 
 The component development process is documented in
-[docs/component-process.md](docs/component-process.md).
+[docs/component-process.md](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/docs/component-process.md) in the repository.
 
 ## Development Status
 
-**Current Phase**: Component build-out — 27 shipped, published to npm
+**Current Phase**: Released — maintenance and Figma-sync; 31 components on npm
 
 Completed:
 
 - ✅ Complete design-token extraction (58 colors, 8 radii, 13 spacing steps,
   24 text styles, 2 effects — full Figma Plugin-API enumeration)
-- ✅ 27 components with visual specs (603 assertions), a11y scans, and
+- ✅ 31 components with visual specs (741 assertions), a11y scans, and
   static/bundle gates — all running in CI
 - ✅ Published to npm as `@valiify/shortapp-ui`
 - ✅ Chromatic visual regression in CI; tag-driven release workflow with
@@ -220,8 +220,8 @@ Completed:
 
 Next steps:
 
-- ⏳ Remaining Figma sets: Address Super entry, Layer field, Disclaimer
-  container, User
+- ⏳ Remaining Figma sets include Layer field, Disclaimer container, User
+  and Portal Specific
 - ⏳ Storybook deployment
 
 ## Architecture
@@ -245,7 +245,7 @@ the tag push triggers the Release workflow as a verification gate — it
 re-runs the fast gates plus the packaging smoke test (`npm run
 verify:package` — the real tarball in a real Vite consumer build, both
 entry points). CI publishing can be enabled later via npm Trusted
-Publishing; see the notes in `.github/workflows/release.yml`.
+Publishing; see the notes in [.github/workflows/release.yml](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/.github/workflows/release.yml).
 
 ## Links
 

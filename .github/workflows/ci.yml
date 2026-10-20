@@ -149,6 +149,12 @@ jobs:
       - name: verify:vocabulary
         run: npm run verify:vocabulary
 
+      # Same slot and same reasoning as verify:vocabulary: reads shipped prose,
+      # nothing downstream depends on it. Fails when a doc inside the tarball
+      # links to a file that is not in the tarball, or to one that does not exist.
+      - name: verify:doc-paths
+        run: npm run verify:doc-paths
+
 # Deliberately not here yet: `prettier --check`, which fails on 35 prose files
 # (docs/*.md, CLAUDE.md, SKILL.md). Adding it now would ship CI red. Separate
 # cleanup — see the audit's section 4.

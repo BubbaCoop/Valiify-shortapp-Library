@@ -115,12 +115,13 @@ import "./styles.css";
 - Verify sprite.svg path is correct for your bundler
 
 ### Components look broken
-- Check that you're using the full markup structure (see CLAUDE.md in the repo)
+- Check that you're using the full markup structure (see Storybook, or CLAUDE.md in the repo)
 - Many components need wrapper elements (e.g., `.va-text-field` > `.va-text-field-box` > `.va-text-field-input`)
 - Verify you're using the correct variant/size classes
 
 ## Learn More
 
 - [Package README](../../README.md) - Installation and configuration
-- [CLAUDE.md](../../CLAUDE.md) - Complete component reference with full markup
-- [Component Docs](../../docs/component-process.md) - How components are built
+- [Storybook](https://bubbacoop.github.io/Valiify-Application-Component-Library/) - Every component rendered, with markup
+- [CLAUDE.md](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/CLAUDE.md) - Complete component reference with full markup
+- [Component process](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/docs/component-process.md) - How components are built

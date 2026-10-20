@@ -152,7 +152,7 @@ Make sure you ran `npm install` in the example directory, not just the parent re
 
 - [GETTING_STARTED.md](../GETTING_STARTED.md) - Complete installation guide
 - [TROUBLESHOOTING.md](../TROUBLESHOOTING.md) - Debug common issues
-- [COMPONENTS.md](../COMPONENTS.md) - Full component markup reference
+- [Storybook](https://bubbacoop.github.io/Valiify-Application-Component-Library/) - Full component markup reference
 
 ### [daisyui-starter/](daisyui-starter/) - The host-collision test
 

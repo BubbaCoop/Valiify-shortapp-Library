@@ -88,7 +88,7 @@ For an icon outside any component slot, size and colour are available as utiliti
   the glyph slot classes above.
 
 So a standalone icon either sits inside one of those slots, or its paint is written by
-hand. CLAUDE.md tracks the fix — folding the repeated paint block into one
+hand. The repository's CLAUDE.md tracks the fix — folding the repeated paint block into one
 `@utility icon-glyph` — as a deliberate, deferred refactor needing full visual
 re-verification. Until it lands, **prefer a slot class over a bare `<svg>`.**
 
@@ -121,6 +121,6 @@ no build timestamp, so rebuilding without changing an icon produces no diff.
 | `src/icons/sprite.svg` | generated sprite — do not hand-edit |
 | `src/icons/custom/` | custom source SVGs |
 | `src/icons/icon-list.txt` | every available symbol name |
-| `scripts/build-sprite.mjs` | the generator |
+| `scripts/build-sprite.mjs` (in the repo, not the package) | the generator |
 | `src/components/icon-button.css` | the icon-button family |
 | `class-manifest.json` | the authoritative class list all gates compare against |

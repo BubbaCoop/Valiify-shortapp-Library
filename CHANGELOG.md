@@ -5,6 +5,50 @@ All notable changes to `@valiify/shortapp-ui` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Token names are public API — renaming or removing one is a breaking change.
 
+> Entries below name paths inside the
+> [repository](https://github.com/BubbaCoop/Valiify-Application-Component-Library)
+> — `scripts/`, `docs/`, `val/`, `CLAUDE.md` and so on. Those are maintainer
+> material and deliberately do not ship in the npm package; the history is
+> kept verbatim rather than rewritten. Nothing in the package depends on them.
+
+## [1.4.2] - 2026-10-20
+
+Documentation only — no CSS, token, class or export changes.
+
+### Fixed
+
+- **Shipped docs no longer point at files that are not in the package.**
+  `GETTING_STARTED.md` told consumers to "see the Quick Reference in
+  CLAUDE.md" and linked it relatively, but CLAUDE.md is maintainer material
+  excluded by `files` — so for anyone installing from npm the link was dead
+  and the component reference unreachable. It now names three places that
+  actually exist for a consumer: the deployed Storybook, the shipped
+  `class-manifest.json`, and CLAUDE.md's GitHub URL. The same treatment is
+  applied in `README.md`, `TROUBLESHOOTING.md`, `examples/README.md`,
+  `examples/vite-starter/README.md` and `src/components/ICON-SYSTEM.md`.
+- **Four links to a COMPONENTS.md and one to an accessibility-audit doc
+  removed** — neither file has ever existed in this repository, so these were
+  broken for maintainers too, not just for consumers. They now point at
+  Storybook and the designer list respectively.
+- **Stale counts corrected.** `GETTING_STARTED.md` said 21 components and
+  `README.md` said 27 in two places; the library has shipped 31 since 1.4.0.
+  The visual-spec assertion count moves 603 → 741, the "remaining Figma sets"
+  list drops Address Super entry and Confirmation Modal (both shipped), and
+  README's status line no longer reads "Component build-out".
+
+### Added
+
+- **`npm run verify:doc-paths`** — a gate that fails when a doc inside the
+  tarball links to a file that is not in the tarball, or references one that
+  does not exist in the repository at all. It takes the shipped file list from
+  `npm pack --dry-run --json`, so it cannot drift from the `files` field, and
+  it carries a canary self-test. Bare prose mentions of real repository paths
+  stay legal and are reported in yellow: docs legitimately discuss the repo,
+  and this changelog is a historical record rather than something to rewrite.
+  Runs in CI alongside `verify:vocabulary`.
+- **A note at the top of this changelog** stating that entries name repository
+  paths which deliberately do not ship.
+
 ## [1.4.1] - 2026-10-15
 
 ### Changed

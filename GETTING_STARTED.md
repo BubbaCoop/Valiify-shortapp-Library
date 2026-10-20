@@ -2,10 +2,29 @@
 
 Complete installation guide for all build setups.
 
-> **Note**: 21 components are shipped (see the Quick Reference in CLAUDE.md); the remaining Figma sets (Address Super entry, Layer field, Disclaimer container, User, Confirmation Modal, Portal Specific) are pending extraction.
-> Component class names used in the snippets below (e.g. `.va-btn`, `.va-text-field`) are
-> illustrative of how the library is consumed — the real class reference will
-> live in [CLAUDE.md](CLAUDE.md) as components land.
+> **Note**: 31 components are shipped. Figma sets still pending extraction
+> include Layer field, Disclaimer container, User and Portal Specific.
+
+### Where the component reference lives
+
+This package ships CSS, not prose, so the full class reference is not inside
+the tarball. Three places have it, in the order you will want them:
+
+| Source | What it gives you |
+| ------ | ----------------- |
+| [Storybook](https://bubbacoop.github.io/Valiify-Application-Component-Library/) | Every component rendered, with controls and copy-pasteable markup. Start here. |
+| `node_modules/@valiify/shortapp-ui/class-manifest.json` | The authoritative list of every class the bundle defines — 173 component classes and 297 utilities. Also exported as `@valiify/shortapp-ui/manifest`. |
+| [CLAUDE.md in the repo](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/CLAUDE.md) | The written Quick Reference: class API, state tables and HTML per component. |
+
+The 31 components: Action, Address, Avatar, Badge, BoxAction, Button,
+Checkbox, DropdownField, DropdownList, Header, IconButton, ListItem, Modal,
+OtpCell, OtpField, Owner, OwnerContainer, Radio, RadioField, SelectCard,
+Skeleton, StatusTracker, Switch, Tabs, TextArea, TextField, TextSelector,
+Toast, Tooltip, Upload, UtilityButton.
+
+Class names in the snippets below (e.g. `.va-btn`, `.va-text-field`) are real
+and current, but check one of the three sources above for the full markup
+structure — several components need specific wrapper elements.
 
 ## Prerequisites
 
@@ -199,7 +218,7 @@ Badge ships with no colour variants, no sizes and no states — `src/components/
 records that as deliberate ("not modelled, not invented"), so there is no success or
 dot variant to reach for.
 
-See [COMPONENTS.md](COMPONENTS.md) for complete markup examples of every component.
+See [Storybook](https://bubbacoop.github.io/Valiify-Application-Component-Library/) for complete markup examples of every component.
 
 ## Without Tailwind v4: the prebuilt bundle
 
@@ -321,7 +340,7 @@ Many components require wrapper elements:
 </div>
 ```
 
-See [COMPONENTS.md](COMPONENTS.md) for the required structure of each component.
+See [Storybook](https://bubbacoop.github.io/Valiify-Application-Component-Library/) for the required structure of each component.
 
 ## Framework-Specific Setup
 
@@ -484,7 +503,7 @@ To verify your installation is working:
 
 ## Next Steps
 
-- Browse components in [COMPONENTS.md](COMPONENTS.md)
+- Browse components in [Storybook](https://bubbacoop.github.io/Valiify-Application-Component-Library/), or read the written reference in [CLAUDE.md](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/CLAUDE.md)
 - See working examples in `examples/vite-starter/` and `examples/postcss-starter/`
 - Read the [README](README.md) for architecture and development info
 - Check [TROUBLESHOOTING.md](TROUBLESHOOTING.md) if you hit issues
