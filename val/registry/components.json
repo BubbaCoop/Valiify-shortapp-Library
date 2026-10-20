@@ -2,59 +2,126 @@
   "Action": {
     "path": "src/components/action.css",
     "story": "components-action--interactive",
-    "figmaNodeIds": ["71:845", "71:846", "71:847", "71:848"],
+    "figmaNodeIds": [
+      "71:845",
+      "71:846",
+      "71:847",
+      "71:848"
+    ],
     "variants": {
-      "state": ["rest", "pending", "done"]
+      "state": [
+        "rest",
+        "pending",
+        "done"
+      ]
     },
     "behaviors": [
       "only the trailing .action-cta is interactive; state classes .action-pending/.action-done swap the title ink and trailing chip"
     ],
-    "props": ["title", "description", "state", "badge"],
+    "props": [
+      "title",
+      "description",
+      "state",
+      "badge"
+    ],
     "tokens": [],
-    "figmaNames": ["Action"]
+    "figmaNames": [
+      "Action"
+    ]
   },
   "Address": {
     "path": "src/components/address.css",
     "story": "components-address--interactive",
-    "figmaNodeIds": ["281:4634", "281:4635", "281:4683", "913:704", "913:860"],
+    "figmaNodeIds": [
+      "281:4634",
+      "281:4635",
+      "281:4647",
+      "281:4659",
+      "281:4671",
+      "281:4683",
+      "281:4695",
+      "913:704",
+      "913:730",
+      "913:756",
+      "913:782",
+      "913:808",
+      "913:834",
+      "913:860"
+    ],
     "variants": {},
     "behaviors": [
       "ONE group box (Paper, 1px Divider, radius 4) holding five bespoke cells in three rows (Height/LG each); inner dividers are the darker Stroke/Border",
       "focus-within = Primary group border + the 3px FIELD ring; the focused row gains an inset 2px Primary/Track marker and drops its divider",
       "error = aria-invalid on any input -> amber group border + hint (labeled family extension); disabled = App Page + Tertiary; hint classes follow the family"
     ],
-    "props": ["label", "invalid", "disabled", "hint"],
+    "props": [
+      "label",
+      "invalid",
+      "disabled",
+      "hint"
+    ],
     "tokens": [],
-    "figmaNames": ["Address Super entry"]
+    "figmaNames": [
+      "Address Super entry"
+    ]
   },
   "Avatar": {
     "path": "src/components/avatar.css",
     "story": "components-avatar--interactive",
-    "figmaNodeIds": ["23:670"],
+    "figmaNodeIds": [
+      "23:664",
+      "23:669",
+      "23:670",
+      "29:813",
+      "29:815"
+    ],
     "variants": {
-      "size": ["md", "sm"]
+      "size": [
+        "md",
+        "sm"
+      ]
     },
     "behaviors": [
       "initials only, circular; uppercase is the type style's transform"
     ],
-    "props": ["initials", "size", "feint"],
+    "props": [
+      "initials",
+      "size",
+      "feint"
+    ],
     "tokens": [],
-    "figmaNames": ["Avatar"]
+    "figmaNames": [
+      "Avatar"
+    ]
   },
   "Badge": {
     "path": "src/components/badge.css",
     "story": "components-badge--interactive",
-    "figmaNodeIds": ["28:505", "28:507"],
+    "figmaNodeIds": [
+      "28:507"
+    ],
     "variants": {},
     "behaviors": [],
     "props": [],
     "tokens": [],
-    "figmaNames": ["Badge"]
+    "figmaNames": [
+      "Badge"
+    ]
   },
   "BoxAction": {
     "path": "src/components/box-action.css",
     "story": "components-boxaction--interactive",
-    "figmaNodeIds": ["199:12990"],
+    "figmaNodeIds": [
+      "199:12986",
+      "199:12987",
+      "199:12988",
+      "199:12989",
+      "199:12990",
+      "325:7774",
+      "325:7777",
+      "325:7780",
+      "325:7783"
+    ],
     "variants": {},
     "behaviors": [
       "row state derives from the real nested input via :has(:checked)/:has(:disabled)",
@@ -62,7 +129,9 @@
     ],
     "props": [],
     "tokens": [],
-    "figmaNames": ["Box action"]
+    "figmaNames": [
+      "Box action"
+    ]
   },
   "Button": {
     "path": "src/components/button.css",
@@ -78,43 +147,78 @@
       "1:267",
       "1:275",
       "1:283",
+      "57:2807",
+      "57:2815",
+      "57:2823",
       "511:5078",
       "511:5086",
       "511:5094",
       "511:5098",
-      "57:2807",
-      "57:2815",
-      "57:2823",
+      "914:624",
+      "914:628",
+      "914:632",
+      "914:637",
       "914:671",
       "914:677"
     ],
     "variants": {
-      "type": ["primary", "secondary", "micro", "bubble"]
+      "type": [
+        "primary",
+        "secondary",
+        "micro",
+        "bubble"
+      ]
     },
     "behaviors": [
       "native button states; a type class is required; Primary/Focus token = pressed fill wired to :active",
-      "Figma: Appearance=Standard of the unified Button set (styles renamed Text/Rounded for micro/bubble \u2014 classes keep old names); icons are uniform optional left/right slots",
+      "Figma: Appearance=Standard of the unified Button set (styles renamed Text/Rounded for micro/bubble — classes keep old names); icons are uniform optional left/right slots",
       "heights token-bound (Height/LG 48 MD, Height/SM 32 rounded); micro binds EYEBROW (11/16/600/10% UPPER, 16 tall) with a >=24px tap overlay",
       "loading via aria-busy=true (914:671/677): rest paints stay, trailing icon yields to a 16px 270-degree spinner in label ink, clicks blocked, width stable",
-      "focus-visible = focus-ring-control (2px solid Primary, offset 2 \u2014 the Focus Ring effect)"
+      "focus-visible = focus-ring-control (2px solid Primary, offset 2 — the Focus Ring effect)"
     ],
-    "props": ["type", "label", "disabled", "trailingIcon", "loading"],
+    "props": [
+      "type",
+      "label",
+      "disabled",
+      "trailingIcon",
+      "loading"
+    ],
     "tokens": [],
-    "figmaNames": ["Button / Standard", "Button"]
+    "figmaNames": [
+      "Button / Standard",
+      "Button"
+    ]
   },
   "Checkbox": {
     "path": "src/components/checkbox.css",
     "story": "components-checkbox--interactive",
-    "figmaNodeIds": ["1:424"],
+    "figmaNodeIds": [
+      "1:424",
+      "1:425",
+      "1:427",
+      "199:12974",
+      "199:12976",
+      "527:6985",
+      "527:6987",
+      "527:7007",
+      "527:7009",
+      "914:695",
+      "914:697"
+    ],
     "variants": {},
     "behaviors": [
       "native input states; :indeterminate renders unchecked (not modelled in Figma)",
       "20x20 since 2026-10-13 (matches Radio); check glyph 16x16, ink BG/Paper (bound)",
       "focus-visible = focus-ring-control; >=24px tap overlay (::after on the input)"
     ],
-    "props": ["checked", "disabled"],
+    "props": [
+      "checked",
+      "disabled"
+    ],
     "tokens": [],
-    "figmaNames": ["Checkbox"]
+    "figmaNames": [
+      "Checkbox"
+    ]
   },
   "DropdownField": {
     "path": "src/components/dropdown-field.css",
@@ -130,12 +234,15 @@
       "521:5308",
       "521:5318",
       "521:5328",
-      "865:4512"
+      "865:4512",
+      "912:608",
+      "912:621",
+      "912:634"
     ],
     "variants": {},
     "behaviors": [
       "consumer JS toggles aria-expanded on the trigger; CSS drives Primary border + 3px ring + chevron 180 rotation; panel is the composed .dropdown-list; error via aria-invalid (amber, verbatim)",
-      "disabled via native :disabled on the trigger \u2014 BG/App Page, Stroke/Divider, Tertiary value, chevron constant (865:4512)",
+      "disabled via native :disabled on the trigger — BG/App Page, Stroke/Divider, Tertiary value, chevron constant (865:4512)",
       "trigger height = var(--height-lg)"
     ],
     "props": [
@@ -148,12 +255,18 @@
       "disabled"
     ],
     "tokens": [],
-    "figmaNames": ["Dropdown Field"]
+    "figmaNames": [
+      "Dropdown Field"
+    ]
   },
   "DropdownList": {
     "path": "src/components/dropdown-list.css",
     "story": "components-dropdownlist--interactive",
-    "figmaNodeIds": ["1:480"],
+    "figmaNodeIds": [
+      "1:480",
+      "1:481",
+      "1:485"
+    ],
     "variants": {},
     "behaviors": [
       "open/close and positioning are the consumer's (hidden attribute or conditional render)",
@@ -161,64 +274,171 @@
     ],
     "props": [],
     "tokens": [],
-    "figmaNames": ["Dropdown List"]
+    "figmaNames": [
+      "Dropdown List"
+    ]
   },
   "Header": {
     "path": "src/components/header.css",
     "story": "components-header--interactive",
-    "figmaNodeIds": ["550:7507"],
+    "figmaNodeIds": [
+      "1:458",
+      "550:7506",
+      "550:7507"
+    ],
     "variants": {},
     "behaviors": [
-      "sticky top-0 z-40 \u2014 must be a direct child of the scroll container; 768px breakpoint swaps .header-desktop/.header-mobile (display:contents wrappers)"
+      "sticky top-0 z-40 — must be a direct child of the scroll container; 768px breakpoint swaps .header-desktop/.header-mobile (display:contents wrappers)"
     ],
     "props": [],
     "tokens": [],
-    "figmaNames": ["Header"]
+    "figmaNames": [
+      "Header"
+    ]
   },
   "IconButton": {
     "path": "src/components/icon-button.css",
     "story": "components-iconbutton--interactive",
-    "figmaNodeIds": ["1:429", "383:8835", "383:8970"],
+    "figmaNodeIds": [
+      "1:429",
+      "1:430",
+      "1:432",
+      "1:434",
+      "1:436",
+      "1:438",
+      "1:440",
+      "1:442",
+      "1:444",
+      "23:719",
+      "23:721",
+      "23:723",
+      "23:725",
+      "23:727",
+      "23:729",
+      "23:731",
+      "23:733",
+      "558:8263",
+      "558:8265",
+      "558:8267",
+      "558:8269",
+      "558:8271",
+      "558:8273",
+      "558:8275",
+      "558:8277"
+    ],
     "variants": {
-      "size": ["md", "sm"],
-      "type": ["icon-only", "state"]
+      "size": [
+        "md",
+        "sm"
+      ],
+      "type": [
+        "icon-only",
+        "state"
+      ]
     },
     "behaviors": [
-      "always needs aria-label; 383:xxxx ids are misnamed duplicate close-X masters used by Modal/Toast \u2014 map their instances here",
-      ">=24px tap overlay (::after), 44px on pointer:coarse \u2014 the Figma description contract; focus-visible = focus-ring-control"
+      "always needs aria-label; 383:xxxx ids are misnamed duplicate close-X masters used by Modal/Toast — map their instances here",
+      ">=24px tap overlay (::after), 44px on pointer:coarse — the Figma description contract; focus-visible = focus-ring-control"
     ],
-    "props": ["icon", "size", "type", "subtle", "disabled"],
+    "props": [
+      "icon",
+      "size",
+      "type",
+      "subtle",
+      "disabled"
+    ],
     "tokens": [],
-    "figmaNames": ["icon button"]
+    "figmaNames": [
+      "icon button"
+    ]
   },
   "ListItem": {
     "path": "src/components/list-item.css",
     "story": "components-listitem--interactive",
-    "figmaNodeIds": ["1:463", "786:6869"],
+    "figmaNodeIds": [
+      "1:464",
+      "1:466",
+      "1:468",
+      "1:470",
+      "1:472",
+      "1:474",
+      "1:476",
+      "1:478",
+      "5:675",
+      "5:677",
+      "5:679",
+      "5:681",
+      "6:126",
+      "6:128",
+      "6:131",
+      "6:133",
+      "6:136",
+      "6:138",
+      "527:6940",
+      "527:6943",
+      "527:6956",
+      "527:6959",
+      "527:6972",
+      "527:6975",
+      "785:9721",
+      "785:9729",
+      "785:9737",
+      "785:9739",
+      "785:9750",
+      "785:9752",
+      "785:9766",
+      "785:9768",
+      "785:9770",
+      "785:9772",
+      "785:9774",
+      "785:9776",
+      "786:6869"
+    ],
     "variants": {},
     "behaviors": [
-      "classes are .list-option* (NOT .list-item \u2014 Tailwind display utility collision); selection via aria-selected",
-      "REBUILT at 786:6869 (36 variants): heights pinned 32/40/48 via Height tokens \u2014 no state changes height; hover/data-active = Action/Hover wash",
+      "classes are .list-option* (NOT .list-item — Tailwind display utility collision); selection via aria-selected",
+      "REBUILT at 786:6869 (36 variants): heights pinned 32/40/48 via Height tokens — no state changes height; hover/data-active = Action/Hover wash",
       "Critical axis = .va-list-option-critical, ink Error/Base (the Error ramp's first consumer); never combined with selection",
-      "NO focus ring on rows (listbox contract \u2014 focus stays on the trigger; data-active carries the aria-activedescendant highlight)"
+      "NO focus ring on rows (listbox contract — focus stays on the trigger; data-active carries the aria-activedescendant highlight)"
     ],
-    "props": ["critical"],
+    "props": [
+      "critical"
+    ],
     "tokens": [],
-    "figmaNames": ["List Item"]
+    "figmaNames": [
+      "List Item"
+    ]
   },
   "Modal": {
     "path": "src/components/modal.css",
     "story": "delete-this-application?--interactive",
-    "figmaNodeIds": ["557:5124", "557:5125", "557:5126", "557:5127"],
+    "figmaNodeIds": [
+      "557:5124",
+      "557:5125",
+      "557:5126",
+      "557:5127"
+    ],
     "variants": {
-      "notice": ["none", "destructive", "success"]
+      "notice": [
+        "none",
+        "destructive",
+        "success"
+      ]
     },
     "behaviors": [
       "primary path: native <dialog> + showModal() (focus trap, Escape, ::backdrop free); div fallback needs role=dialog aria-modal + consumer focus trap; backdrop-click dismissal is consumer JS; Type axis = notice banner presence (Neutral omits it)"
     ],
-    "props": ["title", "description", "notice", "noticeLabel", "noticeBody"],
+    "props": [
+      "title",
+      "description",
+      "notice",
+      "noticeLabel",
+      "noticeBody"
+    ],
     "tokens": [],
-    "figmaNames": ["Modal"]
+    "figmaNames": [
+      "Modal"
+    ]
   },
   "OtpCell": {
     "path": "src/components/otp-cell.css",
@@ -237,140 +457,286 @@
       "error via aria-invalid=true (Warning ramp, decision D4); error+focus keeps amber border, crimson ring fires",
       "disabled DRAWN (913:886): App Page fill + Divider border + Tertiary digit; size = Height/XL (56)"
     ],
-    "props": ["digit", "invalid", "disabled"],
+    "props": [
+      "digit",
+      "invalid",
+      "disabled"
+    ],
     "tokens": [],
-    "figmaNames": ["OTP / Digit cell"]
+    "figmaNames": [
+      "OTP / Digit cell"
+    ]
   },
   "OtpField": {
     "path": "src/components/otp-field.css",
     "story": "components-otpfield--interactive",
     "figmaNodeIds": [
-      "815:9211",
       "815:9207",
       "815:9208",
       "815:9209",
-      "815:9210"
+      "815:9210",
+      "815:9211",
+      "913:888"
     ],
     "variants": {},
     "behaviors": [
       "fieldset+legend composing six OtpCell inputs (title 25 / cells 56 gap 8 / hint 19; row hugs 376, left-aligned)",
       "error = aria-invalid on EVERY cell (Figma draws all six amber) + hint swaps copy; hint ink follows via :has(); auto-advance/paste/aria-invalid wiring is consumer JS"
     ],
-    "props": ["label", "hint", "digits", "invalid"],
+    "props": [
+      "label",
+      "hint",
+      "digits",
+      "invalid"
+    ],
     "tokens": [],
-    "figmaNames": ["OTP field"]
+    "figmaNames": [
+      "OTP field"
+    ]
   },
   "Owner": {
     "path": "src/components/owner.css",
     "story": "components-owner--interactive",
-    "figmaNodeIds": ["261:13223", "261:13224", "261:13225", "275:2350"],
+    "figmaNodeIds": [
+      "261:13223",
+      "261:13224",
+      "261:13225",
+      "275:2350"
+    ],
     "variants": {
-      "icon": ["user", "plus", "building"]
+      "icon": [
+        "user",
+        "plus",
+        "building"
+      ]
     },
     "behaviors": [
       "static decoration, never interactive; one class, the Type axis is a glyph swap (#user/#plus/#building)"
     ],
-    "props": ["icon"],
+    "props": [
+      "icon"
+    ],
     "tokens": [],
-    "figmaNames": ["Owner"]
+    "figmaNames": [
+      "Owner"
+    ]
   },
   "OwnerContainer": {
     "path": "src/components/owner-container.css",
     "story": "components-ownercontainer--interactive",
-    "figmaNodeIds": ["274:256", "274:257", "274:258"],
+    "figmaNodeIds": [
+      "274:256",
+      "274:257",
+      "274:258"
+    ],
     "variants": {
-      "icon": ["user", "building"]
+      "icon": [
+        "user",
+        "building"
+      ]
     },
     "behaviors": [
       "a list row with actions, never a button; badge is the tag boolean via the hidden attribute; delete IconButton needs aria-label"
     ],
-    "props": ["name", "percent", "contact", "icon", "badge"],
+    "props": [
+      "name",
+      "percent",
+      "contact",
+      "icon",
+      "badge"
+    ],
     "tokens": [],
-    "figmaNames": ["Owner Container"]
+    "figmaNames": [
+      "Owner Container"
+    ]
   },
   "Radio": {
     "path": "src/components/radio.css",
     "story": "components-radio--interactive",
-    "figmaNodeIds": ["1:419", "913:569", "914:699"],
+    "figmaNodeIds": [
+      "1:419",
+      "1:420",
+      "1:422",
+      "523:5351",
+      "527:7014",
+      "913:569",
+      "913:571",
+      "914:699",
+      "914:701"
+    ],
     "variants": {},
     "behaviors": [
       "native input states; checked radio takes no hover/pressed tint (excluded by name)",
-      "no disabled visual BY DECISION (2026-10-13) \u2014 cursor-only :disabled is the design",
+      "no disabled visual BY DECISION (2026-10-13) — cursor-only :disabled is the design",
       "disabled DRAWN (913:569/571): ring Stroke/Divider; checked ring+dot Primary/Disabled; focus = focus-ring-control (914:699); >=24px tap overlay (::after)"
     ],
-    "props": ["checked", "disabled"],
+    "props": [
+      "checked",
+      "disabled"
+    ],
     "tokens": [],
-    "figmaNames": ["Radio"]
+    "figmaNames": [
+      "Radio"
+    ]
   },
   "RadioField": {
     "path": "src/components/radio-field.css",
     "story": "components-radiofield--interactive",
-    "figmaNodeIds": ["123:6056", "123:6059"],
+    "figmaNodeIds": [
+      "123:6056",
+      "123:6059",
+      "123:6060",
+      "123:6071",
+      "123:6082",
+      "123:6093",
+      "123:6104",
+      "123:6115",
+      "913:578",
+      "913:596",
+      "913:614",
+      "913:632",
+      "913:650",
+      "913:668",
+      "913:686"
+    ],
     "variants": {},
     "behaviors": [
       "field-level state axes are unwired in Figma; all interaction comes from the composed .radio",
-      "no disabled visual BY DECISION (2026-10-13) \u2014 cursor-only :disabled is the design"
+      "no disabled visual BY DECISION (2026-10-13) — cursor-only :disabled is the design"
     ],
     "props": [],
     "tokens": [],
-    "figmaNames": ["Radio Fields", "Radio field"]
+    "figmaNames": [
+      "Radio Fields",
+      "Radio field"
+    ]
   },
   "SelectCard": {
     "path": "src/components/select-card.css",
     "story": "components-selectcard--interactive",
-    "figmaNodeIds": ["914:707", "9:367"],
+    "figmaNodeIds": [
+      "9:365",
+      "9:366",
+      "9:367",
+      "278:3580",
+      "278:3585",
+      "529:7118",
+      "529:7133",
+      "914:707",
+      "914:712"
+    ],
     "variants": {},
     "behaviors": [
-      "selection derives from the nested .radio via :has(:checked) \u2014 no class syncing; chevron variant is a <button>",
+      "selection derives from the nested .radio via :has(:checked) — no class syncing; chevron variant is a <button>",
       "ring is an authored 0.5px inset shadow in EVERY state (2026-10); Focus axis drawn (focus-ring-control)"
     ],
     "props": [],
     "tokens": [],
-    "figmaNames": ["Card"]
+    "figmaNames": [
+      "Card"
+    ]
   },
   "Skeleton": {
     "path": "src/components/skeleton.css",
     "story": "components-skeleton--interactive",
-    "figmaNodeIds": ["525:4650", "550:7998"],
+    "figmaNodeIds": [
+      "525:4640",
+      "525:4642",
+      "525:4644",
+      "525:4646",
+      "525:4648",
+      "525:4650",
+      "550:7998",
+      "553:349",
+      "553:352",
+      "553:355",
+      "553:359",
+      "553:361",
+      "553:363",
+      "553:365",
+      "553:370",
+      "553:372",
+      "553:374",
+      "553:379"
+    ],
     "variants": {},
     "behaviors": [
-      "pulse 2s ease-in-out synchronized \u2014 never stagger with animation-delay; container carries role=status aria-busy, each .skeleton is aria-hidden",
+      "pulse 2s ease-in-out synchronized — never stagger with animation-delay; container carries role=status aria-busy, each .skeleton is aria-hidden",
       "fill = BG/Skeleton token (tokenized 2026-10-15); field shapes radius 4px; checkbox bone 20/r3 and avatar bone 24 match their controls; input/dropdown md = the 48px field bone (the 73px Figma shape composes label+gap+field)"
     ],
     "props": [],
     "tokens": [],
-    "figmaNames": ["Skeleton"]
+    "figmaNames": [
+      "Skeleton"
+    ]
   },
   "StatusTracker": {
     "path": "src/components/status-tracker.css",
     "story": "components-statustracker--interactive",
-    "figmaNodeIds": ["64:4621", "64:4622", "64:4623"],
+    "figmaNodeIds": [
+      "64:4621",
+      "64:4622",
+      "64:4623"
+    ],
     "variants": {},
     "behaviors": [
       "not interactive in Figma; the Active axis is an ink swap (Tertiary to Primary); track composes at the call site"
     ],
-    "props": ["label", "active"],
+    "props": [
+      "label",
+      "active"
+    ],
     "tokens": [],
-    "figmaNames": ["Application Status"]
+    "figmaNames": [
+      "Application Status"
+    ]
   },
   "Switch": {
     "path": "src/components/switch.css",
     "story": "components-switch--interactive",
-    "figmaNodeIds": ["1:446", "913:573", "914:703"],
+    "figmaNodeIds": [
+      "1:446",
+      "1:447",
+      "1:449",
+      "523:5357",
+      "523:5359",
+      "913:573",
+      "913:575",
+      "914:703",
+      "914:705"
+    ],
     "variants": {},
     "behaviors": [
       "click toggles :checked; knob travels 16px via the CSS translate property; no JS beyond the native checkbox",
-      "no disabled visual BY DECISION (2026-10-13) \u2014 cursor-only :disabled is the design",
+      "no disabled visual BY DECISION (2026-10-13) — cursor-only :disabled is the design",
       "disabled DRAWN (913:573/575): off track Stroke/Divider, on track Primary/Disabled, knob Paper; focus = focus-ring-control (914:703); tap overlay (::after)"
     ],
-    "props": ["checked", "disabled"],
+    "props": [
+      "checked",
+      "disabled"
+    ],
     "tokens": [],
-    "figmaNames": ["Switch"]
+    "figmaNames": [
+      "Switch"
+    ]
   },
   "Tabs": {
     "path": "src/components/tabs.css",
     "story": "components-tabs--interactive",
-    "figmaNodeIds": ["23:825", "914:720", "914:724"],
+    "figmaNodeIds": [
+      "23:821",
+      "23:822",
+      "23:823",
+      "23:824",
+      "23:825",
+      "275:2763",
+      "275:2766",
+      "275:2769",
+      "914:717",
+      "914:720",
+      "914:724",
+      "914:727"
+    ],
     "variants": {},
     "behaviors": [
       "aria-selected=true drives the active fill/ink/weight; the selection swap itself is consumer JS; no underline exists in this design",
@@ -378,7 +744,9 @@
     ],
     "props": [],
     "tokens": [],
-    "figmaNames": ["Tabs"]
+    "figmaNames": [
+      "Tabs"
+    ]
   },
   "TextArea": {
     "path": "src/components/text-area.css",
@@ -391,16 +759,31 @@
       "199:12557",
       "199:12568",
       "199:12579",
-      "865:5526"
+      "865:5526",
+      "912:647",
+      "912:660",
+      "912:673",
+      "912:686",
+      "912:699",
+      "912:712"
     ],
     "variants": {},
     "behaviors": [
-      "native textarea; resize:none is a library decision; no Error axis exists \u2014 none invented",
-      "disabled via native :disabled \u2014 BG/App Page fill, Stroke/Divider border, Tertiary ink (865:5526)"
+      "native textarea; resize:none is a library decision; no Error axis exists — none invented",
+      "disabled via native :disabled — BG/App Page fill, Stroke/Divider border, Tertiary ink (865:5526)"
     ],
-    "props": ["label", "placeholder", "value", "hint", "invalid", "disabled"],
+    "props": [
+      "label",
+      "placeholder",
+      "value",
+      "hint",
+      "invalid",
+      "disabled"
+    ],
     "tokens": [],
-    "figmaNames": ["Text Area Field"]
+    "figmaNames": [
+      "Text Area Field"
+    ]
   },
   "TextField": {
     "path": "src/components/text-field.css",
@@ -416,30 +799,61 @@
       "515:5147",
       "515:5159",
       "515:5171",
-      "865:5431"
+      "865:5431",
+      "912:566",
+      "912:580",
+      "912:594"
     ],
     "variants": {},
     "behaviors": [
-      "error via aria-invalid=true on the input (binds the WARNING ramp verbatim \u2014 Figma slip); box focus via :has(:focus); hint wired with aria-describedby",
-      "disabled via native :disabled \u2014 BG/App Page fill, Stroke/Divider border, Tertiary ink (865:5431)",
+      "error via aria-invalid=true on the input (binds the WARNING ramp verbatim — Figma slip); box focus via :has(:focus); hint wired with aria-describedby",
+      "disabled via native :disabled — BG/App Page fill, Stroke/Divider border, Tertiary ink (865:5431)",
       "box height = var(--height-lg) (token-bound in Figma)"
     ],
-    "props": ["label", "placeholder", "value", "invalid", "hint", "disabled"],
+    "props": [
+      "label",
+      "placeholder",
+      "value",
+      "invalid",
+      "hint",
+      "disabled"
+    ],
     "tokens": [],
-    "figmaNames": ["Plain Text Field"]
+    "figmaNames": [
+      "Plain Text Field"
+    ]
   },
   "TextSelector": {
     "path": "src/components/text-selector.css",
     "story": "components-textselector--interactive",
-    "figmaNodeIds": ["1:489"],
+    "figmaNodeIds": [
+      "1:489",
+      "1:490",
+      "1:494",
+      "1:498",
+      "1:502",
+      "1:506",
+      "1:510",
+      "1:514",
+      "1:518",
+      "529:7075",
+      "529:7079",
+      "529:7083",
+      "529:7087"
+    ],
     "variants": {},
     "behaviors": [
       "aria-expanded=true drives open ink + chevron 180 rotation; panel composition is the consumer's",
       "tap overlay + focus-ring-control (2026-10)"
     ],
-    "props": ["label", "expanded"],
+    "props": [
+      "label",
+      "expanded"
+    ],
     "tokens": [],
-    "figmaNames": ["Text Selector"]
+    "figmaNames": [
+      "Text Selector"
+    ]
   },
   "Toast": {
     "path": "src/components/toast.css",
@@ -452,86 +866,139 @@
       "582:9362"
     ],
     "variants": {
-      "type": ["success", "error", "info"]
+      "type": [
+        "success",
+        "error",
+        "info"
+      ]
     },
     "behaviors": [
-      "positioning, stacking, timers, dismissal are consumer JS; role=status (confirmations) or role=alert (failures); z-70; Type paints the icon only \u2014 'error' binds Warning/Base verbatim"
+      "positioning, stacking, timers, dismissal are consumer JS; role=status (confirmations) or role=alert (failures); z-70; Type paints the icon only — 'error' binds Warning/Base verbatim"
     ],
-    "props": ["type", "title", "body"],
+    "props": [
+      "type",
+      "title",
+      "body"
+    ],
     "tokens": [],
-    "figmaNames": ["Toast"]
+    "figmaNames": [
+      "Toast"
+    ]
   },
   "Tooltip": {
     "path": "src/components/tooltip.css",
     "story": "components-tooltip--interactive",
-    "figmaNodeIds": ["582:9178"],
+    "figmaNodeIds": [
+      "582:9178"
+    ],
     "variants": {},
     "behaviors": [
       "show/hide + anchoring are the consumer's (Popover API pairs well); role=tooltip + aria-describedby on the trigger"
     ],
-    "props": ["title", "body"],
+    "props": [
+      "title",
+      "body"
+    ],
     "tokens": [],
-    "figmaNames": ["tooltip"]
+    "figmaNames": [
+      "tooltip"
+    ]
   },
   "Upload": {
     "path": "src/components/upload.css",
     "story": "components-upload--interactive",
-    "figmaNodeIds": ["778:6949", "778:6948", "778:6947", "778:7029"],
+    "figmaNodeIds": [
+      "778:6949",
+      "778:6948",
+      "778:6947",
+      "778:7029"
+    ],
     "variants": {},
     "behaviors": [
       "a <label> drop zone wrapping a visually-hidden file input; Height/LG, radius 8, DASHED 1px Divider border",
       "drag-over = .va-upload-active (Action/Hover fill + dashed Stroke/Hover); completed = .va-upload-complete (solid Divider + App Page + filename + composed Remove text-button)",
       "focus on the hidden input rings the row (focus-ring-control); drag events and file handling are consumer JS"
     ],
-    "props": ["meta", "active"],
+    "props": [
+      "meta",
+      "active"
+    ],
     "tokens": [],
-    "figmaNames": ["Upload"]
+    "figmaNames": [
+      "Upload"
+    ]
   },
   "UtilityButton": {
     "path": "src/components/utility-button.css",
     "story": "components-utilitybutton--interactive",
     "figmaNodeIds": [
+      "1:218",
       "24:4380",
       "24:4381",
-      "24:4382",
       "25:368",
       "25:371",
       "28:772",
       "28:775",
       "28:778",
       "28:781",
+      "57:2953",
+      "57:2957",
+      "57:2974",
+      "57:2978",
       "508:5007",
       "508:5011",
       "508:5014",
       "508:5018",
       "508:5022",
       "508:5026",
-      "57:2953",
-      "57:2957",
-      "57:2974",
-      "57:2978",
       "847:575",
       "847:577",
       "847:579",
       "847:581",
       "861:8205",
       "861:8295",
+      "861:8299",
+      "861:8303",
+      "861:8307",
+      "861:8311",
+      "914:642",
+      "914:646",
+      "914:651",
+      "914:655",
+      "914:660",
+      "914:664",
+      "914:669",
       "914:683",
       "914:689"
     ],
     "variants": {
-      "type": ["empty", "filled", "rounded", "text", "link"]
+      "type": [
+        "empty",
+        "filled",
+        "rounded",
+        "text",
+        "link"
+      ]
     },
     "behaviors": [
-      "non-inline button family (Figma: Appearance=Utility of the unified Button set; styles renamed Secondary/Primary/Rounded/Text/Link \u2014 classes keep old names, mapping in CLAUDE.md)",
+      "non-inline button family (Figma: Appearance=Utility of the unified Button set; styles renamed Secondary/Primary/Rounded/Text/Link — classes keep old names, mapping in CLAUDE.md)",
       "Empty's Stroke/Divider border is CONSTANT across states (2026-10 merge; the old rest-only border is obsolete); Filled carries the same ring",
       "Text has no underline (moved to Link); Link ink is a constant Text/Primary, underlined, disabled = cursor only",
       "SM rows 32 / MD 48 (Height tokens); empty is a GHOST box (Paper removed) with constant Text/Primary ink and constant Divider border",
       "disabled UNIFIED (2026-10-15) to the Standard treatment: no fill, Divider border, Tertiary ink+icon for empty/rounded/text/link; filled keeps Primary/Disabled",
       "loading via aria-busy (914:683/689, Primary/Secondary SM); link ramp Primary->Hover->Focus->Tertiary (drawn per variant); focus-visible = focus-ring-control; text/link carry tap overlays"
     ],
-    "props": ["type", "label", "md", "leadingIcon", "loading"],
+    "props": [
+      "type",
+      "label",
+      "md",
+      "leadingIcon",
+      "loading"
+    ],
     "tokens": [],
-    "figmaNames": ["Button / Utility", "Button"]
+    "figmaNames": [
+      "Button / Utility",
+      "Button"
+    ]
   }
 }
