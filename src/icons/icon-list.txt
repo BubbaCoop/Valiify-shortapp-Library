@@ -2032,5 +2032,6 @@ zodiac-taurus
 zodiac-virgo
 zoom-in
 zoom-out
+custom-currency-dollar
 custom-help
 custom-valiify-logo

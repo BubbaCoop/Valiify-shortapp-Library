@@ -5,8 +5,8 @@
   "componentNamespace": "va-",
   "utilityPrefix": "va:",
   "counts": {
-    "components": 173,
-    "utilities": 297
+    "components": 174,
+    "utilities": 299
   },
   "components": [
     "va-action",
@@ -146,6 +146,7 @@
     "va-text-field-help",
     "va-text-field-hint",
     "va-text-field-icon",
+    "va-text-field-icon-currency",
     "va-text-field-input",
     "va-text-field-title",
     "va-text-field-title-row",
@@ -350,6 +351,7 @@
     "va:md:size-5",
     "va:md:size-8.5",
     "va:md:sticky",
+    "va:md:tabular-nums",
     "va:md:text-body-content",
     "va:md:text-content-contrast",
     "va:md:text-content-hint",
@@ -435,6 +437,7 @@
     "va:size-5",
     "va:size-8.5",
     "va:sticky",
+    "va:tabular-nums",
     "va:text-body-content",
     "va:text-content-contrast",
     "va:text-content-hint",

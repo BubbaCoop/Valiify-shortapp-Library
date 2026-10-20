@@ -223,7 +223,7 @@ Missing wrapper elements or incorrect markup structure.
 
 **Check the component reference:**
 
-Browse every component rendered, with copy-pasteable markup, in [Storybook](https://bubbacoop.github.io/Valiify-Application-Component-Library/). The written reference — class API, state tables and required markup structure — is [CLAUDE.md in the repo](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/CLAUDE.md). Every class the bundle defines is listed in `class-manifest.json`, which ships with the package.
+Browse every component rendered, with copy-pasteable markup, in [Storybook](https://bubbacoop.github.io/Valiify-Application-Component-Library/). The written reference — class API, state tables and required markup structure — is [CLAUDE.md in the repo](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.3/CLAUDE.md). Every class the bundle defines is listed in `class-manifest.json`, which ships with the package.
 
 **Quick verification:**
 
@@ -381,7 +381,7 @@ axe or Lighthouse flags color contrast issues on labels, placeholders, or tertia
 Known issue: `Content/Tertiary` (#727280) fails WCAG AA (4.5:1) on `Surface/Neutral` and `Surface/Frame` backgrounds. Ratios are 4.20 and 4.26 (need 4.5:1).
 
 ### Status
-Designer-blocked. This is a token-level issue, not a CSS bug. Waived entries are listed in `KNOWN_ISSUES` in the repo's a11y scanner, and the consolidated list is [docs/designer-list.md](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/docs/designer-list.md).
+Designer-blocked. This is a token-level issue, not a CSS bug. Waived entries are listed in `KNOWN_ISSUES` in the repo's a11y scanner, and the consolidated list is [docs/designer-list.md](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.3/docs/designer-list.md).
 
 ### Workaround
 For critical labels that must pass AA, override with a darker color:

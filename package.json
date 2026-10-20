@@ -1,6 +1,6 @@
 {
   "name": "@valiify/shortapp-ui",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Tailwind CSS component library for the Valiify Short App (online account applications)",
   "style": "dist/index.css",
   "types": "types/index.d.ts",

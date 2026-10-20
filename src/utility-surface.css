@@ -9,7 +9,7 @@
  * a page using it renders unstyled with nothing failing. This file is committed so
  * that set is reviewable in a diff.
  *
- * 297 utilities — each base plus its `md:` form (the one sanctioned
+ * 299 utilities — each base plus its `md:` form (the one sanctioned
  * breakpoint). Candidates that do not compile are dropped by the generator.
  */
 
@@ -179,6 +179,7 @@
 @source inline("va:md:size-5");
 @source inline("va:md:size-8.5");
 @source inline("va:md:sticky");
+@source inline("va:md:tabular-nums");
 @source inline("va:md:text-body-content");
 @source inline("va:md:text-content-contrast");
 @source inline("va:md:text-content-hint");
@@ -264,6 +265,7 @@
 @source inline("va:size-5");
 @source inline("va:size-8.5");
 @source inline("va:sticky");
+@source inline("va:tabular-nums");
 @source inline("va:text-body-content");
 @source inline("va:text-content-contrast");
 @source inline("va:text-content-hint");

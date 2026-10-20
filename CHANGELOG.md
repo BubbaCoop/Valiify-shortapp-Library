@@ -11,6 +11,49 @@ Token names are public API — renaming or removing one is a breaking change.
 > material and deliberately do not ship in the npm package; the history is
 > kept verbatim rather than rewritten. Nothing in the package depends on them.
 
+## [1.4.3] - 2026-10-20
+
+### Fixed
+
+- **The currency glyph in a text field is filled, as drawn.** `.va-text-field-icon`
+  paints the Lucide line-icon way (`fill: none`, `stroke: currentColor`), which
+  is right for every other glyph in the family and wrong for this one: Figma's
+  leading currency mark is a single filled path. Drawn through the stroke
+  block it rendered an ink box of 11×16.5 css against the reference's 7.5×14,
+  in a darker `#545659`, and pushed the value run 1px right. The BSA accuracy
+  run (2026-10-15) reported it on all four frames — the only genuine component
+  defect it found.
+
+  New: **`.va-text-field-icon-currency`**, a modifier on the same slot that
+  swaps to `fill: currentColor` and binds `Neutral/Base`, plus a new sprite
+  symbol **`#custom-currency-dollar`** exported from the authored vector. Use
+  both together in place of `#dollar-sign` for currency fields:
+
+  ```html
+  <svg class="va-text-field-icon va-text-field-icon-currency" aria-hidden="true">
+    <use href="#custom-currency-dollar" />
+  </svg>
+  ```
+
+  The slot's size is unchanged — the glyph is 10×18 in a 24 viewBox, so at 18px
+  it paints 7.5×13.5, as drawn. `.va-text-field-icon` itself is untouched, so
+  no existing icon changes.
+
+  The ink was settled by a Plugin API read of the rendered vector's
+  `boundVariables` rather than by matching the hex: `#6F7276` is the value of
+  **both** `Neutral/Base` and `Text/Tertiary`, and the earlier read-only
+  inspection could not tell them apart. The binding is `Neutral/Base`. (The
+  glyph's own main component is a remote icon filled raw `#000000` at 54%; the
+  page instance overrides it, and the override is what renders.)
+
+### Added
+
+- **`va:tabular-nums` (and its `md:` form) now ship in the prebuilt utility
+  surface** — 297 → 299. Figure columns need lining figures so digits align
+  and a value does not reflow as it is typed, and the bundle carried no
+  `tabular` declaration at all, so the class was silently a no-op. The surface
+  is generated from the methodology, so this follows from §5 citing it.
+
 ## [1.4.2] - 2026-10-20
 
 Documentation only — no CSS, token, class or export changes.

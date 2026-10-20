@@ -943,6 +943,16 @@ Labeled single-line text input. Extracted from Figma Plain Text Field (1:291)
     pinned wrapper div — a native input can't host the icon slots; state styling
     hangs off it via `:has()`) › `.va-text-field-input` (the native input) +
     optional `.va-text-field-icon` (18px, leading/trailing) › `.va-text-field-hint`
+- **Currency fields take `.va-text-field-icon-currency`** alongside the slot
+  class, with the sprite symbol `#custom-currency-dollar` (1.4.3). Figma's
+  currency mark is a FILLED path, the only one in the family that is, so the
+  slot's Lucide line-icon paint is wrong for it: drawn as a stroke it measured
+  11×16.5 css against the reference's 7.5×14, in a darker ink, and pushed the
+  value run 1px right. The modifier swaps to `fill: currentColor` and binds
+  **`Neutral/Base`** — established by a Plugin API read of the rendered
+  vector's `boundVariables`, not by matching the hex, since `#6F7276` is also
+  `Text/Tertiary`'s value. Slot size is unchanged (10×18 in a 24 viewBox →
+  7.5×13.5 at 18px). `.va-text-field-icon` itself is untouched.
 - **States**: `:hover`, `:has(:focus)` (any focus — Figma's Focus axis is the
   caret), `aria-invalid="true"` (error), `:focus` ring on error too
 

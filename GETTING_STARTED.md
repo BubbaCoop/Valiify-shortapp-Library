@@ -14,7 +14,7 @@ the tarball. Three places have it, in the order you will want them:
 | ------ | ----------------- |
 | [Storybook](https://bubbacoop.github.io/Valiify-Application-Component-Library/) | Every component rendered, with controls and copy-pasteable markup. Start here. |
 | `node_modules/@valiify/shortapp-ui/class-manifest.json` | The authoritative list of every class the bundle defines — 173 component classes and 297 utilities. Also exported as `@valiify/shortapp-ui/manifest`. |
-| [CLAUDE.md in the repo](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/CLAUDE.md) | The written Quick Reference: class API, state tables and HTML per component. |
+| [CLAUDE.md in the repo](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.3/CLAUDE.md) | The written Quick Reference: class API, state tables and HTML per component. |
 
 The 31 components: Action, Address, Avatar, Badge, BoxAction, Button,
 Checkbox, DropdownField, DropdownList, Header, IconButton, ListItem, Modal,
@@ -503,7 +503,7 @@ To verify your installation is working:
 
 ## Next Steps
 
-- Browse components in [Storybook](https://bubbacoop.github.io/Valiify-Application-Component-Library/), or read the written reference in [CLAUDE.md](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/CLAUDE.md)
+- Browse components in [Storybook](https://bubbacoop.github.io/Valiify-Application-Component-Library/), or read the written reference in [CLAUDE.md](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.3/CLAUDE.md)
 - See working examples in `examples/vite-starter/` and `examples/postcss-starter/`
 - Read the [README](README.md) for architecture and development info
 - Check [TROUBLESHOOTING.md](TROUBLESHOOTING.md) if you hit issues

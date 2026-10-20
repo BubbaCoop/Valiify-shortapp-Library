@@ -123,5 +123,5 @@ import "./styles.css";
 
 - [Package README](../../README.md) - Installation and configuration
 - [Storybook](https://bubbacoop.github.io/Valiify-Application-Component-Library/) - Every component rendered, with markup
-- [CLAUDE.md](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/CLAUDE.md) - Complete component reference with full markup
-- [Component process](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/docs/component-process.md) - How components are built
+- [CLAUDE.md](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.3/CLAUDE.md) - Complete component reference with full markup
+- [Component process](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.3/docs/component-process.md) - How components are built

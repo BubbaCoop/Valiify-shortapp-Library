@@ -114,6 +114,31 @@
     stroke-linejoin: round;
   }
 
+  /* The currency glyph is FILLED, and it is the only one in the family that is.
+   *
+   * The slot's paint block above is correct for the Lucide line icons it was
+   * built for, and wrong for this one. Figma's leading currency glyph is a
+   * single filled path (#custom-currency-dollar, exported from the authored
+   * vector), not line art: drawing it through the stroke block produced an ink
+   * box of 11x16.5 css against the reference's 7.5x14, in a darker #545659,
+   * and pushed the value run 1px right — the one genuine defect the BSA
+   * accuracy run (2026-10-15) reported on every frame.
+   *
+   * Ink is Neutral/Base, settled by a Plugin API read of the rendered vector's
+   * boundVariables (VariableID:1:117 -> Neutral/Base, #6f7276) rather than by
+   * matching the hex, which is ambiguous: #6F7276 is also Text/Tertiary's
+   * value. The main component is a remote icon whose own fill is a raw
+   * #000000 at 54%; the page instance overrides it with the bound variable,
+   * and the override is what renders.
+   *
+   * Geometry closes with the slot unchanged: the glyph is 10x18 in a 24
+   * viewBox, so at the slot's 18px it paints 7.5x13.5, as drawn. */
+  .va-text-field-icon-currency {
+    @apply text-neutral;
+    fill: currentColor;
+    stroke: none;
+  }
+
   .va-text-field-input {
     @apply min-w-0 flex-1 appearance-none border-0 bg-transparent p-0 outline-none;
     @apply text-input text-content-primary;

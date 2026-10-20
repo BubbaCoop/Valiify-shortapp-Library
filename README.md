@@ -7,7 +7,7 @@ CSS-only, framework-agnostic, zero JavaScript dependencies. Components are
 extracted from the Short App Figma component library and verified against it
 with an automated visual harness.
 
-> **Status: v1.4.2 on npm — 31 components**, extracted from the Short App
+> **Status: v1.4.3 on npm — 31 components**, extracted from the Short App
 > Figma file and verified against it: 741 computed-style assertions,
 > axe-core clean across every story, token-pinned control heights
 > (`--height-*`), drawn disabled/focus/loading states, and WCAG 2.5.8
@@ -84,7 +84,7 @@ Three more things to know before using it:
    - **Add a utility:** use it in the methodology, then
      `npm run build:utility-surface && npm run build`, and commit the regenerated
      `src/utility-surface.css`.
-   - **Add a variant:** extend `RESPONSIVE` in [scripts/build-utility-surface.mjs](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/scripts/build-utility-surface.mjs)
+   - **Add a variant:** extend `RESPONSIVE` in [scripts/build-utility-surface.mjs](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.3/scripts/build-utility-surface.mjs)
      in the repository and rebuild. Each one multiplies the surface by the number of bases.
    - **Or skip the whole trade-off:** use `./source` with your own Tailwind v4 and
      get the full scale, compiled by your build.
@@ -161,7 +161,7 @@ See [GETTING_STARTED.md](GETTING_STARTED.md) for the complete setup guide and
 
 ## Components
 
-31 components, each documented in [the repo's CLAUDE.md Quick Reference](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/CLAUDE.md)
+31 components, each documented in [the repo's CLAUDE.md Quick Reference](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.3/CLAUDE.md)
 with class API, state tables, and copy-pasteable HTML:
 
 - **Controls** — Button (Standard: Primary/Secondary/Micro/Bubble),
@@ -202,7 +202,7 @@ npm run audit            # coverage across the library
 ```
 
 The component development process is documented in
-[docs/component-process.md](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/docs/component-process.md) in the repository.
+[docs/component-process.md](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.3/docs/component-process.md) in the repository.
 
 ## Development Status
 
@@ -245,7 +245,7 @@ the tag push triggers the Release workflow as a verification gate — it
 re-runs the fast gates plus the packaging smoke test (`npm run
 verify:package` — the real tarball in a real Vite consumer build, both
 entry points). CI publishing can be enabled later via npm Trusted
-Publishing; see the notes in [.github/workflows/release.yml](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.2/.github/workflows/release.yml).
+Publishing; see the notes in [.github/workflows/release.yml](https://github.com/BubbaCoop/Valiify-Application-Component-Library/blob/v1.4.3/.github/workflows/release.yml).
 
 ## Links
 

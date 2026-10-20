@@ -3,7 +3,7 @@
   <!--
     Valiify Short App Icon Sprite
 
-    Contains 2034 Lucide icons + 2 custom icons = 2036 total
+    Contains 2034 Lucide icons + 3 custom icons = 2037 total
 
     Usage — the class is the component slot class of wherever the icon sits
     (.va-text-field-icon, .va-toast-icon, .va-action-icon, .va-text-selector-icon);
@@ -12214,6 +12214,9 @@
     <circle cx="11" cy="11" r="8" />
   <line x1="21" x2="16.65" y1="21" y2="16.65" />
   <line x1="8" x2="14" y1="11" y2="11" />
+  </symbol>
+  <symbol id="custom-currency-dollar" viewBox="0 0 24 24">
+    <path d="M 11.8 10.9 C 9.53 10.31 8.8 9.7 8.8 8.75 C 8.8 7.66 9.81 6.9 11.5 6.9 C 12.92 6.9 13.63 7.44 13.89 8.3 C 14.01 8.7 14.34 9 14.76 9 L 15.06 9 C 15.72 9 16.19 8.35 15.96 7.73 C 15.54 6.55 14.56 5.57 13 5.19 L 13 4.5 C 13 3.67 12.33 3 11.5 3 C 10.67 3 10 3.67 10 4.5 L 10 5.16 C 8.06 5.58 6.5 6.84 6.5 8.77 C 6.5 11.08 8.41 12.23 11.2 12.9 C 13.7 13.5 14.2 14.38 14.2 15.31 C 14.2 16 13.71 17.1 11.5 17.1 C 9.85 17.1 9 16.51 8.67 15.67 C 8.52 15.28 8.18 15 7.77 15 L 7.49 15 C 6.82 15 6.35 15.68 6.6 16.3 C 7.17 17.69 8.5 18.51 10 18.83 L 10 19.5 C 10 20.33 10.67 21 11.5 21 C 12.33 21 13 20.33 13 19.5 L 13 18.85 C 14.95 18.48 16.5 17.35 16.5 15.3 C 16.5 12.46 14.07 11.49 11.8 10.9 Z" fill="currentColor"/>
   </symbol>
   <symbol id="custom-help" viewBox="0 0 22 22">
     <path id="Vector" d="M8.09009 8.00008C8.32519 7.33175 8.78924 6.76819 9.40004 6.40921C10.0108 6.05024 10.729 5.91902 11.4273 6.03879C12.1255 6.15857 12.7589 6.52161 13.2152 7.06361C13.6714 7.60561 13.9211 8.2916 13.9201 9.00008C13.9201 11.0001 10.9201 12.0001 10.9201 12.0001M11 16H11.01M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
