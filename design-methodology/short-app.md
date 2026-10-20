@@ -173,7 +173,7 @@ The surface runs on a 4px grid — Tailwind's spacing scale expresses it directl
 ## 5. Component selection rules
 
 - **Card list for a single choice; box list for multiple; radios for yes/no.** Choice cards = `.va-select-card` as a `<button>` with `.va-select-card-chevron` (76, chevron, no commit button) when exactly one option advances the flow. Checklist boxes = `.va-box-action va-box-action-checkbox` (48, `.va-checkbox-control` inside, commit button) when several may apply. Inline `Yes / No` = `.va-radio-field` (`.va-radio-field-option`s composing `.va-radio`; never a `.va-dropdown-field`, never a `.va-switch`) for binary questions inside a form. **Evidence:** §2 archetypes 1–3; 118:5928 Radio Fields. **Confidence:** high.
-- **Dropdown for enumerations, text for free entry, formatted placeholder for anything with a shape.** `Select…` = `.va-dropdown-field` (a `<button>` trigger, 48, `aria-haspopup="listbox"`, opening the shipped `.va-dropdown-list` › `.va-list-option va-list-option-sm` panel) for revenue bands, employee counts, industry; `.va-text-field` with `000-000-0000`, `MM/YYYY`, `00000`, `0.00`, `••••` placeholders (native `::placeholder` in `va:text-content-hint` — `--color-content-hint`: #8e9195). Currency inputs carry a leading `$` in the `.va-text-field-icon` slot (18, `va:text-content-secondary`, glyph `#dollar-sign`). **Free entry splits by shape of answer:** a single-line answer is `.va-text-field` (48 box, 73 pitch); an answer that is a *list or a sentence* is `.va-text-area` (79 box, 104 pitch) — see §10. Choose by what the question asks for, not by expected length: "To or from which countries?" takes a multi-line field because the answer is a list, even when one country is a valid answer. **Evidence:** BSA.png, Full_time.png, Short_App.png, 118:5928 AttachMoneyRounded; BSA Filled 199:12185 → 636:2045, 636:2448 (two `Text Area Field` instances, 560×104). **Confidence:** high.
+- **Dropdown for enumerations, text for free entry, formatted placeholder for anything with a shape.** `Select…` = `.va-dropdown-field` (a `<button>` trigger, 48, `aria-haspopup="listbox"`, opening the shipped `.va-dropdown-list` › `.va-list-option va-list-option-sm` panel) for revenue bands, employee counts, industry; `.va-text-field` with `000-000-0000`, `MM/YYYY`, `00000`, `0.00`, `••••` placeholders (native `::placeholder` in `va:text-content-hint` — `--color-content-hint`: #8e9195). Currency inputs carry a leading `$` in the `.va-text-field-icon` slot (18), and that slot takes the `.va-text-field-icon-currency` modifier, which swaps the family's line-icon paint for a filled one and binds Neutral/Base: the glyph is `#custom-currency-dollar`, a filled path exported from the authored vector, not the line-art `#dollar-sign` (shipped 1.4.3 — the BSA accuracy run measured the stroke-drawn version 11×16.5 against the reference's 7.5×14). Currency and other figure columns also carry `va:tabular-nums`, so digits align down a column and a value does not reflow as it is typed. **Free entry splits by shape of answer:** a single-line answer is `.va-text-field` (48 box, 73 pitch); an answer that is a *list or a sentence* is `.va-text-area` (79 box, 104 pitch) — see §10. Choose by what the question asks for, not by expected length: "To or from which countries?" takes a multi-line field because the answer is a list, even when one country is a valid answer. **Evidence:** BSA.png, Full_time.png, Short_App.png, 118:5928 AttachMoneyRounded; BSA Filled 199:12185 → 636:2045, 636:2448 (two `Text Area Field` instances, 560×104). **Confidence:** high.
 - **Toggle only for "reveal more fields."** The single switch on the applicant surface (`Mail should go to a different address`) is `.va-switch` (36×20; off track `va:bg-stroke-border`, on `va:bg-primary`) and reveals a second address block; it is not used for yes/no answers. Loan coverages use switches because they are opt-ins with a price. (The library also ships `.va-box-action va-box-action-switch`, a boxed 44px switch row; no frame uses it.) **Evidence:** 348:8076, 449:10462 Switch. **Confidence:** high.
 - **Conditional fields reveal in place, indented, with a left rule.** BSA follow-ups ("Do you plan to send or receive international wires?" → "To or from which countries?") and the mailing address block indent ~22px under a vertical hairline (`va:border-l va:border-stroke-divider va:pl-5.5` `[raw]`). Nothing opens a modal or a new step. **Evidence:** BSA_Filled.png, Business_Details_mailing_address.png. **Confidence:** high (composition) / medium (exact indent — §13).
 - **Two button tiers.** *Step tier:* the Standard button — `.va-btn` at 48 (`va:h-12`), `va:type-button-label` (`--text-button-label`: Inter Semi Bold 14/20, +10% tracking, bundled UPPERCASE), `va:rounded-sm` (`--radius-sm`: 4px), with an 18px arrow `svg` child — `BACK` = `.va-btn va-btn-secondary` (`va:border va:border-stroke-border`, `--color-stroke-border`: #1a1a1a @17%, ink `va:text-content-secondary`, leading `#arrow-left`), primary = `.va-btn va-btn-primary` (`va:bg-primary`, `--color-primary`: #a6192e; `:disabled` → `va:bg-primary-disabled`, `--color-primary-disabled`: #a6192e @30%; trailing `#arrow-right`); a disabled Back is `.va-btn-secondary:disabled` (`va:border-stroke-divider va:text-content-tertiary` — gray by design, reserved; no current frame disables Back). *Inline tier:* the Utility button — `.va-utility-button va-utility-button-filled` / `va-utility-button-empty` (34 tall, `va:text-field-label` 13/500, natural case — `Add Person`, `Save`, `Cancel`), the same crimson/outline pairing, used only inside a card's inline form. **Evidence:** button instances on all frames; Account_role_2.png, Full_time-1.png. **Confidence:** high.
@@ -311,12 +311,35 @@ The multi-line free-text field was on that list until 2026-09-16 and is now mapp
 
 Compose these from tokens and the primitives above. Nothing in `_dashboard-archive/` may be cited or imported; `_template.css` is scaffolding, not a component.
 
+> **Page layout is the app's, and custom layout CSS is sanctioned here**
+> (decided 2026-10-20, §13.1). The library ships components, not a layout
+> shell, and it never will: the package has no page-shell class and the
+> prebuilt utility surface is a closed set, so a layout need that no shipped
+> utility covers is **not** a `no-component` stop. Write the rule as ordinary
+> CSS in the app, under the app's own class names, exactly as the Roles matrix
+> row below already writes a literal inset shadow.
+>
+> Two limits keep this from becoming a loophole. It covers **layout only**:
+> position, flow, visibility, track sizing and breakpoints. Anything with a
+> *visual* value — colour, radius, type, spacing rhythm, borders — still comes
+> from a token or a shipped utility, and a raw one is still marked `[raw]`.
+> And it never restyles a component: a library class is not a selector the app
+> may override. A block that needs a component that does not exist is still a
+> `no-component` stop.
+>
+> When writing such a rule into this document, name the app's classes without
+> a leading dot and do not spell out library utilities or CSS declarations in
+> backticks: the utility surface is generated by scraping prefixed utility
+> names out of this file, so naming one here ships it, and the vocabulary gate
+> reads a dotted token in backticks as a component class.
+
 | Pattern | Composition |
 |---|---|
 | Page shell | canvas `va:bg-surface-app-page`; body `va:w-140 va:mx-auto va:py-12 va:flex va:flex-col va:gap-10`; `.va-header` as a direct child of the scroll container (sticky contract) |
 | Title block | `va:type-eyebrow` row (`va:text-content-tertiary` run + `va:text-primary-text` section) › `va:text-display va:text-content-primary` › `va:text-input va:text-content-secondary`, `va:gap-2` |
 | Button row (web) | `va:flex va:gap-6`; `.va-btn va-btn-secondary` (+ `#arrow-left`) · `.va-btn va-btn-primary va:flex-1` (+ `#arrow-right`); `va:w-full` primary when no Back; in flow |
-| Mobile footer (interim, until the §12 component lands) | `va:h-19 va:py-3.5 va:px-4 va:flex va:gap-5 va:bg-surface-paper va:border-t va:border-stroke-divider va:mt-auto va:sticky va:bottom-0 va:z-40`; `.va-btn va-btn-secondary` 99 + `.va-btn va-btn-primary va:flex-1`; the bar's horizontal padding follows the shell's (`va:px-5` on the revised BSA frames — 720:8131 pads 14/20; 721:8460 still 14/16, a frame inconsistency on the designer list). **Pinning contract:** the footer is a DIRECT child of the scroll container (`<body>`), which is `va:min-h-screen va:flex va:flex-col`; `va:mt-auto` parks the bar at the viewport bottom when the step is shorter than the screen, `va:sticky va:bottom-0` keeps it there while a taller step scrolls. A wrapper around the bar becomes its containing block and makes the sticky inert (§13.1, 2026-09-17) |
+| Mobile footer (interim, until the §12 component lands) | `va:h-19 va:py-3.5 va:px-4 va:flex va:gap-5 va:bg-surface-paper va:mt-auto va:sticky va:bottom-0 va:z-40` with `box-shadow: inset 0 1px 0 var(--color-stroke-divider)`; **the top hairline is an INSET SHADOW written as CSS, not a border and not a utility** (the Roles matrix row below writes its hairline the same way — an arbitrary shadow utility does not survive the surface generator, so spelling it as one would ship nothing) — a border occupies layout and pushed the whole action row 1px down against the frame (BSA accuracy run 2026-10-15, corroborated by the build's own self-check: Back at y1479 against a record of 1478), while a Figma stroke displaces nothing. Same reason OwnerContainer, Tabs-Application and Modal all paint their rules as inset shadows; `.va-btn va-btn-secondary` 99 + `.va-btn va-btn-primary va:flex-1`; the bar's horizontal padding follows the shell's (`va:px-5` on the revised BSA frames — 720:8131 pads 14/20; 721:8460 still 14/16, a frame inconsistency on the designer list). **Pinning contract:** the footer is a DIRECT child of the scroll container (`<body>`), which is `va:min-h-screen va:flex va:flex-col`; `va:mt-auto` parks the bar at the viewport bottom when the step is shorter than the screen, `va:sticky va:bottom-0` keeps it there while a taller step scrolls. A wrapper around the bar becomes its containing block and makes the sticky inert (§13.1, 2026-09-17) |
+| Responsive action row (web button row vs mobile footer) | The two are different elements in different DOM positions — the web row sits in flow inside the column (§1.1), the mobile footer is a direct child of the scroll container (§1.2, and the pinning contract below). Draw **both**, and switch them in the app's own stylesheet, because no shipped utility can: the closed surface carries no display or visibility utility, at any breakpoint. Give the two elements app-owned class names (step-actions-web and step-actions-mobile, or the app's equivalent) and let the app's CSS show one and hide the other, with the mobile one showing by default and the web one taking over at a 768px min-width media query — the library's single sanctioned breakpoint (Header's switch; Library Contracts). Each element still carries its own library classes from the two rows below; the app's rule sets nothing but which one displays. Do not merge them into one element with breakpoint resets, and do not render one and hide it from sight only, which leaves the actions duplicated for assistive tech. A script `matchMedia` branch is also acceptable but is not the default: it paints one variant on the server and shifts on hydrate |
 | Sub-section label + hairline | `va:type-eyebrow va:text-content-secondary` over `va:border-b va:border-stroke-divider` |
 | Checklist "None of the below" seam | `va:border-b va:border-stroke-divider` after the first `.va-box-action`, inside the `va:gap-3` stack |
 | Conditional reveal | `va:border-l va:border-stroke-divider va:pl-5.5 va:flex va:flex-col va:gap-5` (indent ~22 `[raw]`) |
@@ -375,6 +398,36 @@ Anything a page needs from this list is unspecified; do not infer it.
 Changes to this file after its initial authoring, with what triggered them. A rule
 here was wrong or absent; the entry says how that was established, so the same
 question is not re-litigated from the frames each time.
+
+**2026-10-20 — Page layout is the app's; custom layout CSS sanctioned; §11 gains a Responsive action row.**
+
+*Triggered by:* `/design` run `2026-10-15-design-bsa-account-information`, Gate 3
+critique finding F3. The concept drew the web button row (b29) and the mobile
+footer (b30) as two elements in two DOM positions, correctly, and then had no way
+to show one and hide the other: the closed prebuilt surface carries no display or
+visibility utility at any breakpoint, and no §10 or §11 entry named a mechanism.
+Under skill §3 that is a partial §11 recipe gap, so the architect was obliged to
+stop — `CONCEPT: BLOCKED` with a `no-component` question.
+
+*Established by:* the requester's decision, 2026-10-20: the library will not ship
+a layout shell of any kind, page layout is the consuming app's responsibility, and custom
+layout CSS is allowed. This is a scope decision about the package, not a reading
+of the frames, so no frame evidence applies or was sought.
+
+*Consequence:* a layout need with no shipped utility is no longer a stop — see the
+note under §11. Two things deliberately did NOT change. The `no-component` trigger
+itself is untouched (it lives in val-core's skill §3, and still fires for a missing
+*component*). And the allowance is layout-only: visual values still come from
+tokens, and library component classes are still not the app's to restyle. The
+same critique's F1, a tabular-figures utility the closed surface does not carry,
+is a different question — a missing *utility*, not a layout rule — and is
+unaffected by this entry.
+
+*Noted while writing this entry:* naming a prefixed utility anywhere in this file
+ships it, because `build-utility-surface.mjs` scrapes this directory for them. A
+first draft of this entry cited the three absent utilities by name and silently
+added them to the surface. That is why the note under §11 says to describe such
+utilities rather than spell them.
 
 **2026-09-17 — BSA mobile frames revised to 20px horizontal padding; recorded per-frame, rule left open.**
 
